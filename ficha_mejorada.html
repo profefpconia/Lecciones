@@ -1,12 +1,28 @@
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Module Name
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Lesson Title 1</a>
-    <a class="dropdown-item" href="#">Lesson Title 2</a>
-    <a class="dropdown-item" href="#">Lesson Title 3</a>
-    <!-- Add additional lesson titles here -->
-  </div>
-</div>
-<!-- Ensure to replace 'Module Name' and lesson titles with dynamic data from your JavaScript function or server-side rendering. -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Lecciones</title>
+</head>
+<body>
+    <!-- Other content omitted for brevity -->
+
+    <header>
+        <h1>Lecciones del Módulo</h1>
+        <div class="header-level-badge">
+            <div class="dropdown">
+                <button class="dropbtn">{{ currentModuleTitle }}</button>
+                <div class="dropdown-content">
+                    {{#each topics}}
+                        <a href="#">{{ this }}</a>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
+</body>
+</html>
